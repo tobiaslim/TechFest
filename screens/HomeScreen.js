@@ -6,8 +6,9 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
+  Alert
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -30,14 +31,18 @@ export default class HomeScreen extends React.Component {
                 <Image source={require('../assets/images/icons8-event-100.png')} style={styles.quickAccessItemImage}></Image>
                 <Text style={styles.quickAccessItemText}>Events</Text>
               </View>
+              <TouchableWithoutFeedback onPress={()=>{this.props.navigation.navigate('ResourceFinder')}}>
               <View style={styles.quickAccessItem}>
                 <Image source={require('../assets/images/icons8-ereader-100.png')} style={styles.quickAccessItemImage}></Image>
                 <Text style={styles.quickAccessItemText}>Resource{"\n"}Finder</Text>
               </View>
-              <View style={styles.quickAccessItem}>
-                <Image source={require('../assets/images/icons8-support-100.png')} style={styles.quickAccessItemImage}></Image>
-                <Text style={styles.quickAccessItemText}>Photo fault</Text>
-              </View>
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback onPress={()=>{this.props.navigation.navigate('Settings')}}>
+                <View style={styles.quickAccessItem}>
+                  <Image source={require('../assets/images/icons8-support-100.png')} style={styles.quickAccessItemImage}></Image>
+                  <Text style={styles.quickAccessItemText}>Photo{"\n"}fault</Text>
+                </View>
+              </TouchableWithoutFeedback>
             </ScrollView>
           </View>
         </View>

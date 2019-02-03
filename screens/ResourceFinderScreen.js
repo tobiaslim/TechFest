@@ -13,7 +13,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
-export default class OrderScreen extends React.Component {
+export default class ResourceFinderScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -21,7 +21,7 @@ export default class OrderScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.greeting}>Order Screen</Text>
+        <Text style={styles.greeting}>ResourceFinderScreen</Text>
       </View>
     );
   }

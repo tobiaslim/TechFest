@@ -6,9 +6,13 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import OrderScreen from '../screens/OrderScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ReportScreen from '../screens/ReportScreen';
+import ResourceFinderScreen from '../screens/ResourceFinderScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  Report: ReportScreen,
+  ResourceFinder: ResourceFinderScreen
 });
 
 HomeStack.navigationOptions = {
